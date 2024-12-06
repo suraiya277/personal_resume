@@ -23,6 +23,20 @@ body {
     transform: translateY(-100%);
   }
   
+  /* Responsive Profile Picture */
+@media screen and (max-width: 768px) {
+    .header .profile-photo img {
+      width: 50px; /* Smaller size for mobile devices */
+      height: 50px;
+      border-radius: 50%; /* Keep it circular for smaller sizes */
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+    }
+  
+    .header {
+      padding: 10px 40px; /* Adjust header padding for smaller screens */
+    }
+  }
+  
   .header .intro h1 {
     font-size: 2.5rem;
     margin: 0;
