@@ -1,16 +1,13 @@
-let lastScrollTop = 0; // Tracks the last scroll position
+// Sticky Header Animation
+let header = document.querySelector('.header');
+let lastScroll = 0;
 
-document.addEventListener("scroll", () => {
-  const header = document.querySelector(".header");
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > lastScrollTop) {
-    // Scrolling down, hide the header
-    header.classList.add("hidden");
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    header.classList.add('hidden');
   } else {
-    // Scrolling up, show the header
-    header.classList.remove("hidden");
+    header.classList.remove('hidden');
   }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative values
+  lastScroll = currentScroll;
 });
