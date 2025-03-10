@@ -1,13 +1,15 @@
-// Sticky Header Animation
-let header = document.querySelector('.header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
-  if (currentScroll > lastScroll && currentScroll > 50) {
-    header.classList.add('hidden');
-  } else {
-    header.classList.remove('hidden');
-  }
-  lastScroll = currentScroll;
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down - hide header
+        header.classList.add('hidden');
+      } else {
+        // Scrolling up - show header
+        header.classList.remove('hidden');
+      }
+      lastScrollY = window.scrollY;
+    });
+  });

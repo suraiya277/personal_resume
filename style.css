@@ -19,9 +19,11 @@ body {
     z-index: 1000;
     transition: transform 0.4s ease-out;
   }
+  
   .header.hidden {
     transform: translateY(-100%);
   }
+  
   .header .intro h1 {
     font-size: 2.5rem;
     margin: 0;
@@ -59,7 +61,10 @@ body {
   .profile-photo img:hover {
     transform: scale(1.1);
   }
-  
+  /*cv part*/
+  .cv-content{
+    padding: 10px 50px;
+  }
   /* About Section */
   .about, .skills {
     padding: 60px 80px;
@@ -120,4 +125,5 @@ body {
       height: 100px;
     }
   }
+  
   
